@@ -6,6 +6,7 @@ import { TableList } from '@/packages/components/Tables/index'
 import { PhotoList } from '@/packages/components/Photos/index'
 import { IconList } from '@/packages/components/Icons/index'
 import { PackagesCategoryEnum, PackagesType, ConfigType, FetchComFlagType } from '@/packages/index.d'
+import { CesiumList } from '@/packages/components/Cesium/index'
 
 const configModules: Record<string, { default: string }> = import.meta.glob('./components/**/config.vue', {
   eager: true
@@ -19,6 +20,7 @@ const imagesModules: Record<string, { default: string }> = import.meta.glob('../
 
 // * 所有图表
 export let packagesList: PackagesType = {
+  [PackagesCategoryEnum.CESIUM]: CesiumList,
   [PackagesCategoryEnum.CHARTS]: ChartList,
   [PackagesCategoryEnum.VCHART]: VChartList,
   [PackagesCategoryEnum.INFORMATIONS]: InformationList,

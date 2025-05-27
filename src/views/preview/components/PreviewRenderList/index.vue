@@ -27,11 +27,11 @@
     <component
       v-else
       :is="item.chartConfig.chartKey"
-      :id="item.id"
+      :id="detectId(item)"
       :chartConfig="item"
       :themeSetting="themeSetting"
       :themeColor="themeColor"
-      :style="{ 
+      :style="{
         ...getSizeStyle(item.attr),
         ...getFilterStyle(item.styles)
       }"
@@ -62,6 +62,14 @@ const chartEditStore = useChartEditStore()
 //     required: true
 //   }
 // })
+
+const detectId = (item: any) => {
+  const key = item.chartConfig.chartKey
+  const category = item.chartConfig.category
+  if (key.includes('VCesium') && category === 'Base') return 'cesiumContainer'
+  else if (key.includes('VOL') && category === 'Base') return 'olMapContainer'
+  else return item.id
+}
 
 // 主题色
 const themeSetting = computed(() => {

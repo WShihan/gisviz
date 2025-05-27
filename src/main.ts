@@ -17,6 +17,8 @@ import '@/styles/pages/index.scss'
 import 'animate.css/animate.min.css'
 // 引入标尺
 import 'vue3-sketch-ruler/lib/style.css'
+// element样式
+import 'element-plus/dist/index.css'
 // 注册图标
 addCollection(uimIcons)
 addCollection(lineMdIcons)
@@ -64,4 +66,3 @@ async function appInit() {
 appInit().then(() => {
   initFunction()
 })
-
