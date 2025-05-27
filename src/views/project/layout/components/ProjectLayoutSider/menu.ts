@@ -19,7 +19,7 @@ export const menuOptionsInit = () => {
   return reactive([
     {
       key: 'divider-1',
-      type: 'divider',
+      type: 'divider'
     },
     {
       label: () => h('span', null, { default: () => t('project.project') }),
@@ -37,13 +37,13 @@ export const menuOptionsInit = () => {
                   RouterLink,
                   {
                     to: {
-                      name: PageEnum.BASE_HOME_ITEMS_NAME,
-                    },
+                      name: PageEnum.BASE_HOME_ITEMS_NAME
+                    }
                   },
                   { default: () => t('project.all_project') }
                 ),
               key: PageEnum.BASE_HOME_ITEMS_NAME,
-              icon: renderIcon(TvOutlineIcon),
+              icon: renderIcon(TvOutlineIcon)
             },
             {
               label: () =>
@@ -51,36 +51,22 @@ export const menuOptionsInit = () => {
                   RouterLink,
                   {
                     to: {
-                      name: PageEnum.BASE_HOME_TEMPLATE_NAME,
-                    },
+                      name: PageEnum.BASE_HOME_TEMPLATE_NAME
+                    }
                   },
                   { default: () => t('project.my_template') }
                 ),
               key: PageEnum.BASE_HOME_TEMPLATE_NAME,
-              icon: renderIcon(ObjectStorageIcon),
-            },
-          ],
-        },
-      ],
+              icon: renderIcon(ObjectStorageIcon)
+            }
+          ]
+        }
+      ]
     },
 
     {
       key: 'divider-2',
-      type: 'divider',
-    },
-    {
-      label: () =>
-        h(
-          RouterLink,
-          {
-            to: {
-              name: PageEnum.BASE_HOME_TEMPLATE_MARKET_NAME,
-            },
-          },
-          { default: () => t('project.template_market') }
-        ),
-      key: PageEnum.BASE_HOME_TEMPLATE_MARKET_NAME,
-      icon: renderIcon(StoreIcon),
-    },
+      type: 'divider'
+    }
   ])
 }

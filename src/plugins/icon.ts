@@ -70,7 +70,8 @@ import {
   EyeOffOutline as EyeOffOutlineIcon,
   Albums as AlbumsIcon,
   Analytics as AnalyticsIcon,
-  AirplaneOutline as AirPlaneOutlineIcon
+  AirplaneOutline as AirPlaneOutlineIcon,
+  Globe as GlobeIcon
 } from '@vicons/ionicons5'
 
 import {
@@ -312,7 +313,9 @@ const carbon = {
   // 柱状图
   ChartPieIcon,
   // 编辑
-  EditIcon
+  EditIcon,
+  // 地球
+  GlobeIcon
 }
 
 // https://www.xicons.org/#/ 还有很多
