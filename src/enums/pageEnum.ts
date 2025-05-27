@@ -3,19 +3,19 @@ import { ResultEnum } from '@/enums/httpEnum'
 export enum ChartEnum {
   // 图表创建
   CHART_HOME = '/chart/home/:id(.*)*',
-  CHART_HOME_NAME = 'ChartHome',
+  CHART_HOME_NAME = 'ChartHome'
 }
 
 export enum PreviewEnum {
   //  图表预览
   CHART_PREVIEW = '/chart/preview/:id(.*)*',
-  CHART_PREVIEW_NAME = 'ChartPreview',
+  CHART_PREVIEW_NAME = 'ChartPreview'
 }
 
 export enum EditEnum {
   //  图表JSON编辑
   CHART_EDIT = '/chart/edit/:id(.*)*',
-  CHART_EDIT_NAME = 'ChartEdit',
+  CHART_EDIT_NAME = 'ChartEdit'
 }
 
 export enum PageEnum {
@@ -46,10 +46,6 @@ export enum PageEnum {
   // 我的模板
   BASE_HOME_TEMPLATE = '/project/my-template',
   BASE_HOME_TEMPLATE_NAME = 'Project-My-Template',
-
-  // 模板市场
-  BASE_HOME_TEMPLATE_MARKET = '/project/template-market',
-  BASE_HOME_TEMPLATE_MARKET_NAME = 'Project-Template-Market',
 
   // 错误
   ERROR_PAGE_NAME_403 = 'ErrorPage403',
