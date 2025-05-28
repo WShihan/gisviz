@@ -144,7 +144,7 @@ const shuffleTimiing = ref()
 const carouselImgList = ['one', 'two', 'three']
 
 // 背景图
-const bgList = ref(['bar_y', 'bar_x', 'line_gradient', 'line', 'funnel', 'heatmap', 'map', 'pie', 'radar'])
+const bgList = ref(['bar_y', 'bar_x', 'line_gradient', 'line', 'funnel', 'heatmap', 'globe', 'pie', 'radar'])
 
 // 处理url获取
 const getImageUrl = (name: string, folder: string) => {
@@ -218,6 +218,18 @@ $carousel-image-height: 60vh;
 * {
   box-sizing: border-box;
 }
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+img.login-account-top-logo {
+  animation: 20s linear infinite rotate;
+}
 @include go(login-box) {
   height: $go-login-height;
   overflow: hidden;
@@ -290,7 +302,6 @@ $carousel-image-height: 60vh;
     align-items: center;
     width: 100vw;
     height: 100vh;
-    background: url('@/assets/images/login/login-bg.png') no-repeat 0 -120px;
     .bg-slot {
       width: $carousel-width;
     }
