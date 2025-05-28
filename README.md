@@ -68,10 +68,7 @@ pnpm run build
 
 本项目基于 [GoView](httphttps://gitee.com/dromara/go-view)进行二次开发，修改如下：
 
-- 新增三维GIS场景支持。
+- 支持三维GIS场景。
 - 修改项目名称，商标及其他元数据。
-
-
-
 
 
