@@ -144,7 +144,7 @@ const shuffleTimiing = ref()
 const carouselImgList = ['one', 'two', 'three']
 
 // 背景图
-const bgList = ref(['bar_y', 'bar_x', 'line_gradient', 'line', 'funnel', 'heatmap', 'globe', 'pie', 'radar'])
+const bgList = ref(['bar_y', 'bar_x', 'line_gradient', 'line', 'funnel', 'heatmap', 'graph', 'pie', 'radar'])
 
 // 处理url获取
 const getImageUrl = (name: string, folder: string) => {

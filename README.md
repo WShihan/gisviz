@@ -3,17 +3,27 @@
 
 ## 示例
 
-工作台
-
 ![工作台](./readme/design.png)
 
+<center>工作台</center>
 
 
-效果
 
 ![效果](./readme/preview.gif)
 
+<center>热力地球</center>
 
+
+
+![效果](./readme/白膜.png)
+
+<center>白膜</center>
+
+
+
+![倾斜模型](./readme/3dtiles.png)
+
+<center>倾斜模型</center>
 
 
 
