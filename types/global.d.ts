@@ -1,3 +1,4 @@
+import { type Viewer } from 'cesium'
 interface Window {
   $loading: any
   $message: any
@@ -14,3 +15,13 @@ interface Window {
 }
 
 declare type Recordable<T = any> = Record<string, T>
+
+declare global {
+  /**
+   * 自定义Window 的类型提示
+   */
+  interface Window {
+    viewer: Viewer
+    Cesium: any
+  }
+}

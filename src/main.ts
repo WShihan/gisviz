@@ -11,6 +11,10 @@ import uimIcons from '@iconify/json/json/uim.json'
 import lineMdIcons from '@iconify/json/json/line-md.json'
 import wiIcons from '@iconify/json/json/wi.json'
 
+import * as Cesium from 'cesium'
+// @ts-ignore
+window.Cesium = Cesium
+
 // 引入全局样式
 import '@/styles/pages/index.scss'
 // 引入动画
@@ -60,6 +64,7 @@ async function appInit() {
   app.mount('#app', true)
 
   // 挂载到 window
+  // @ts-ignore
   window['$vue'] = app
 }
 
