@@ -42,8 +42,8 @@ importers:
         specifier: ^1.4.0
         version: 1.7.9
       cesium:
-        specifier: ^1.129.0
-        version: 1.129.0
+        specifier: ^1.120.0
+        version: 1.120.0
       cesium-heatmap-es6:
         specifier: ^0.8.0
         version: 0.8.0
@@ -89,6 +89,9 @@ importers:
       lodash-es:
         specifier: ^4.17.21
         version: 4.17.21
+      mapv:
+        specifier: ^2.0.62
+        version: 2.0.62
       mitt:
         specifier: ^3.0.0
         version: 3.0.1
@@ -221,7 +224,7 @@ importers:
         version: 4.3.6(@types/node@16.18.122)(sass@1.49.11)(terser@5.37.0)
       vite-plugin-cesium:
         specifier: ^1.2.23
-        version: 1.2.23(cesium@1.129.0)(rollup@3.29.5)(vite@4.3.6(@types/node@16.18.122)(sass@1.49.11)(terser@5.37.0))
+        version: 1.2.23(cesium@1.120.0)(rollup@3.29.5)(vite@4.3.6(@types/node@16.18.122)(sass@1.49.11)(terser@5.37.0))
       vite-plugin-compression:
         specifier: ^0.5.1
         version: 0.5.1(vite@4.3.6(@types/node@16.18.122)(sass@1.49.11)(terser@5.37.0))
@@ -375,12 +378,20 @@ packages:
     resolution: {integrity: sha512-vN5p+1kl59GVKMvTHt55NzzmYVxprfJD+ql7U9NFIfKCBkYE55LYtS+WtPlaYOyzydrKI8Nezd+aZextrd+FMA==}
     engines: {node: '>=6.9.0'}
 
+  '@cesium/engine@10.1.0':
+    resolution: {integrity: sha512-xwdJEhGYgf6481vhrb80N5DgQZMwWvn08TWE6NXEgOhkZ7WnTCykYoCDNBMj9WQBqTfREk7/e+/RI4Gx2/TlUA==}
+    engines: {node: '>=14.0.0'}
+
   '@cesium/engine@17.0.0':
     resolution: {integrity: sha512-bvLWmWVY4QX9rfcx/zfBzA8R1xR8KzmaCDOVL6pFkNZeYmRtt8JN//IICYR3P45lznlcb0Dklw1iCb37t4tvLA==}
     engines: {node: '>=14.0.0'}
 
   '@cesium/widgets@12.0.0':
     resolution: {integrity: sha512-5Re06LU8lRPEZInHrpOCGBiLoj9VNJ0JJtPrzdnw1qhIDpf3v1W75OJf59k8CCFvUYkZzuTTi8qTVbpzmcbOuw==}
+    engines: {node: '>=14.0.0'}
+
+  '@cesium/widgets@7.1.0':
+    resolution: {integrity: sha512-SZCtaByBrBTssyUpg0Nir34B4wvvu8bKOMOOevv0AzYxfMeYRBX8CH/Ck/5fUJcTcsVmcYHVOqBF339wwKtcag==}
     engines: {node: '>=14.0.0'}
 
   '@commitlint/cli@17.8.1':
@@ -881,6 +892,9 @@ packages:
 
   '@turf/rewind@6.5.0':
     resolution: {integrity: sha512-IoUAMcHWotBWYwSYuYypw/LlqZmO+wcBpn8ysrBNbazkFNkLf3btSDZMkKJO/bvOzl55imr/Xj4fi3DdsLsbzQ==}
+
+  '@tweenjs/tween.js@23.1.3':
+    resolution: {integrity: sha512-vJmvvwFxYuGnF2axRtPYocag6Clbb5YS7kLL+SO/TeVFzHqDIWrNKYtcsPMibjDx9O+bu+psAy9NKfWklassUA==}
 
   '@tweenjs/tween.js@25.0.0':
     resolution: {integrity: sha512-XKLA6syeBUaPzx4j3qwMqzzq+V4uo72BnlbOjmuljLrRqdsd3qnzvZZoxvMHZ23ndsRS4aufU6JOZYpCbU6T1A==}
@@ -1412,8 +1426,14 @@ packages:
   axios@1.7.9:
     resolution: {integrity: sha512-LhLcE7Hbiryz8oMDdDptSrWowmB4Bl6RCt6sIJKpRB4XtVf0iEgewX3au/pJqm+Py1kCASkb/FFKjxQaLtxJvw==}
 
+  babel-plugin-external-helpers@6.22.0:
+    resolution: {integrity: sha512-TdAMiM6MzLokhk3yCA0KCctmivVZ/mmCwbp7YPmRGkqh2KkcNuxE3R0jxuYU+4xmvfMZx4p4uo8d1cT9t5BLxA==}
+
   babel-plugin-import@1.13.8:
     resolution: {integrity: sha512-36babpjra5m3gca44V6tSTomeBlPA7cHUynrE2WiQIm3rEGD9xy28MKsx5IdO45EbnpJY7Jrgd00C6Dwt/l/2Q==}
+
+  babel-runtime@6.26.0:
+    resolution: {integrity: sha512-ITKNuq2wKlW1fJg9sSW52eepoYgZBggvOAHC0u/CYu/qxQ9EVzThCgR69BnSXLHjy2f7SY5zaQ4yt7H9ZVxY2g==}
 
   babel-walk@3.0.0-canary-5:
     resolution: {integrity: sha512-GAwkz0AihzY5bkwIY5QDR+LvsRQgB/B+1foMPvi0FZPMl5fjD7ICiznUiBdLYMH1QYe6vqu4gWYytZOccLouFw==}
@@ -1501,6 +1521,10 @@ packages:
 
   cesium-heatmap-es6@0.8.0:
     resolution: {integrity: sha512-PzIqqfJ3shCjuEqP3mizU/ciYzvzriBlU9nl7DAi1jJ30PPfJM/tpRGWxH2L4B42Pw+LHuQe4NLxchNRNJtbmw==}
+
+  cesium@1.120.0:
+    resolution: {integrity: sha512-1TkuCgWhhZ+TlNM4Hps08xb+TyNwChkR8MiYNtFior8XIglEvdh+JgPqdI+yfd9M02bjV13HDj5D6muIYsW4uw==}
+    engines: {node: '>=18.18.0'}
 
   cesium@1.129.0:
     resolution: {integrity: sha512-XDEJKLnr8s5/Q/1wcdZVEJCgx+xbgfDzkVKd9OxRZzYttazip6KffusMHexRdExVMPfDcTohuqcuHNxj9CUNFA==}
@@ -1628,6 +1652,10 @@ packages:
 
   convert-source-map@2.0.0:
     resolution: {integrity: sha512-Kvp459HrV2FEJ1CAsi1Ku+MY3kasH19TFykTz2xWmMeq6bk2NU3XXvfJ+Q61m0xktWwt+1HSYf3JZsTms3aRJg==}
+
+  core-js@2.6.12:
+    resolution: {integrity: sha512-Kb2wC0fvsWfQrgk8HU5lW6U/Lcs8+9aaYcy4ZFc6DDlo4nZ7n70dEgE5rtR0oG6ufKDUnrwfWL1mXR5ljDatrQ==}
+    deprecated: core-js@<3.23.3 is no longer maintained and not recommended for usage due to the number of issues. Because of the V8 engine whims, feature detection in old core-js versions could cause a slowdown up to 100x even if nothing is polyfilled. Some versions have web compatibility issues. Please, upgrade your dependencies to the actual version of core-js.
 
   core-util-is@1.0.3:
     resolution: {integrity: sha512-ZQBvi1DcpJ4GDqanjucZ2Hj3wEO5pZDS89BWbkcrvdxksJorwUDDZamX9ldFkp9aw2lmBDLgkObEA4DWNJ9FYQ==}
@@ -2864,6 +2892,9 @@ packages:
     resolution: {integrity: sha512-dhG34DXATL5hSxJbIexCft8FChFXtmskoZYnoPWjXQuebWYCNkVeV3KkGegCK9CP1oswI/vQibS2GY7Em/sJJA==}
     engines: {node: '>= 8'}
 
+  ktx-parse@0.7.1:
+    resolution: {integrity: sha512-FeA3g56ksdFNwjXJJsc1CCc7co+AJYDp6ipIp878zZ2bU8kWROatLYf39TQEd4/XRSUvBXovQ8gaVKWPXsCLEQ==}
+
   ktx-parse@1.0.0:
     resolution: {integrity: sha512-Z31kVizz4DF/6vo9YiSYVBhuXAfyQy9bGxlW3+mB5OELoZjfXVZQpRoctsx8IEDKxBd6SagXKo7qRvu38i8Jfg==}
 
@@ -2985,6 +3016,9 @@ packages:
     resolution: {integrity: sha512-hdN1wVrZbb29eBGiGjJbeP8JbKjq1urkHJ/LIP/NY48MZ1QVXUsQBV1G1zvYFHn1XE06cwjBsOI2K3Ulnj1YXQ==}
     engines: {node: '>=8'}
 
+  mapv@2.0.62:
+    resolution: {integrity: sha512-P/diaWXuH+vJHVON//RBA7nCEdJAdafwN3Hys/TVYB6e3n7emqlQm+r9qy2xYV0GuxflRhbEeMPJWVIK5HEEqw==}
+
   math-intrinsics@1.0.0:
     resolution: {integrity: sha512-4MqMiKP90ybymYvsut0CH2g4XWbfLtmlCkXmtmdcDCxNB+mQcu1w/1+L/VD7vi/PSv7X2JYV7SCcR+jiPXnQtA==}
     engines: {node: '>= 0.4'}
@@ -3005,6 +3039,9 @@ packages:
 
   mersenne-twister@1.1.0:
     resolution: {integrity: sha512-mUYWsMKNrm4lfygPkL3OfGzOPTR2DBlTkBNHM//F6hGp8cLThY897crAlk3/Jo17LEOOjQUrNAx6DvgO77QJkA==}
+
+  meshoptimizer@0.21.0:
+    resolution: {integrity: sha512-WabtlpnK/GgD0GMwYd1fBTfYHf4MIcQPEg6dt7y4GuDcY51RzLSkSNE8ZogD7U3Vs2/fIf4z89TOLpA80EOnhg==}
 
   meshoptimizer@0.23.0:
     resolution: {integrity: sha512-zAZcfhHE3wBbwEN8MfCMI9PKRyOpz8491wcR2dxkv3IlNwDZrq2hEs5JZVtzfBrmjWhBZZtZZUO0OBSNFq5iUQ==}
@@ -3427,6 +3464,9 @@ packages:
   quickselect@2.0.0:
     resolution: {integrity: sha512-RKJ22hX8mHe3Y6wH/N3wCM6BWtjaxIyyUIkpHOvfFnxdI4yD4tBXEBKSbriGujF6jnSVkJrffuo6vxACiSSxIw==}
 
+  quickselect@3.0.0:
+    resolution: {integrity: sha512-XdjUArbK4Bm5fLLvlm5KpTFOiOThgfWWI4axAZDWg4E/0mKdZyI9tNEfds27qCi1ze/vwTR16kvmmGhRra3c2g==}
+
   randombytes@2.1.0:
     resolution: {integrity: sha512-vYl3iOX+4CKUWuxGi9Ukhie6fsqXqS9FE2Zaic4tNFD2N2QQaXOMFbuKK4QmDHC0JO6B1Zp41J0LpT0oR68amQ==}
 
@@ -3436,6 +3476,9 @@ packages:
 
   rbush@3.0.1:
     resolution: {integrity: sha512-XRaVO0YecOpEuIvbhbpTrZgoiI6xBlz6hnlr6EHhd+0x9ase6EmeN+hdwwUaJvLcsFFQ8iWVF1GAK1yB0BWi0w==}
+
+  rbush@4.0.1:
+    resolution: {integrity: sha512-IP0UpfeWQujYC8Jg162rMNc01Rf0gWMMAb2Uxus/Q0qOFw4lCcq6ZnQEZwUoJqWyUGJ9th7JjwI4yIWo+uvoAQ==}
 
   read-pkg-up@7.0.1:
     resolution: {integrity: sha512-zK0TB7Xd6JpCLmlLmufqykGE+/TlOePD6qKClNW7hHDKFh/J7/7gCWGR7joEQEW1bKq3a3yUZSObOoWLFQ4ohg==}
@@ -3467,6 +3510,9 @@ packages:
   reflect.getprototypeof@1.0.8:
     resolution: {integrity: sha512-B5dj6usc5dkk8uFliwjwDHM8To5/QwdKz9JcBZ8Ic4G1f0YmeeJTtE/ZTdgRFPAfxZFiUaPhZ1Jcs4qeagItGQ==}
     engines: {node: '>= 0.4'}
+
+  regenerator-runtime@0.11.1:
+    resolution: {integrity: sha512-MguG95oij0fC3QV3URf4V2SDYGJhJnJGqvIIgdECeODCT98wSWDAJ94SSuVpYQUoTcGUIL6L4yNB7j1DFFHSBg==}
 
   regenerator-runtime@0.14.1:
     resolution: {integrity: sha512-dYnhHh0nJoMfnkZs6GmmhFknAGRrLznOu5nc9ML+EJxGvrx6H7teuevqVqCuPcPK//3eDrrjQhehXVx9cnkGdw==}
@@ -4549,6 +4595,28 @@ snapshots:
       '@babel/helper-string-parser': 7.25.9
       '@babel/helper-validator-identifier': 7.25.9
 
+  '@cesium/engine@10.1.0':
+    dependencies:
+      '@tweenjs/tween.js': 23.1.3
+      '@zip.js/zip.js': 2.7.62
+      autolinker: 4.1.5
+      bitmap-sdf: 1.0.4
+      dompurify: 3.2.6
+      draco3d: 1.5.7
+      earcut: 3.0.1
+      grapheme-splitter: 1.0.4
+      jsep: 1.4.0
+      kdbush: 4.0.2
+      ktx-parse: 0.7.1
+      lerc: 2.0.0
+      mersenne-twister: 1.1.0
+      meshoptimizer: 0.21.0
+      pako: 2.1.0
+      protobufjs: 7.5.0
+      rbush: 4.0.1
+      topojson-client: 3.1.0
+      urijs: 1.19.11
+
   '@cesium/engine@17.0.0':
     dependencies:
       '@tweenjs/tween.js': 25.0.0
@@ -4574,6 +4642,11 @@ snapshots:
   '@cesium/widgets@12.0.0':
     dependencies:
       '@cesium/engine': 17.0.0
+      nosleep.js: 0.12.0
+
+  '@cesium/widgets@7.1.0':
+    dependencies:
+      '@cesium/engine': 10.1.0
       nosleep.js: 0.12.0
 
   '@commitlint/cli@17.8.1':
@@ -4638,7 +4711,7 @@ snapshots:
       '@types/node': 20.5.1
       chalk: 4.1.2
       cosmiconfig: 8.3.6(typescript@5.7.2)
-      cosmiconfig-typescript-loader: 4.4.0(@types/node@20.5.1)(cosmiconfig@8.3.6(typescript@4.6.3))(ts-node@10.9.2(@types/node@16.18.122)(typescript@4.6.3))(typescript@5.7.2)
+      cosmiconfig-typescript-loader: 4.4.0(@types/node@20.5.1)(cosmiconfig@8.3.6(typescript@4.6.3))(ts-node@10.9.2(@types/node@20.5.1)(typescript@5.7.2))(typescript@5.7.2)
       lodash.isplainobject: 4.0.6
       lodash.merge: 4.6.2
       lodash.uniq: 4.5.0
@@ -5032,6 +5105,8 @@ snapshots:
       '@turf/helpers': 6.5.0
       '@turf/invariant': 6.5.0
       '@turf/meta': 6.5.0
+
+  '@tweenjs/tween.js@23.1.3': {}
 
   '@tweenjs/tween.js@25.0.0': {}
 
@@ -5756,11 +5831,20 @@ snapshots:
     transitivePeerDependencies:
       - debug
 
+  babel-plugin-external-helpers@6.22.0:
+    dependencies:
+      babel-runtime: 6.26.0
+
   babel-plugin-import@1.13.8:
     dependencies:
       '@babel/helper-module-imports': 7.25.9
     transitivePeerDependencies:
       - supports-color
+
+  babel-runtime@6.26.0:
+    dependencies:
+      core-js: 2.6.12
+      regenerator-runtime: 0.11.1
 
   babel-walk@3.0.0-canary-5:
     dependencies:
@@ -5861,6 +5945,11 @@ snapshots:
   cesium-heatmap-es6@0.8.0:
     dependencies:
       cesium: 1.129.0
+
+  cesium@1.120.0:
+    dependencies:
+      '@cesium/engine': 10.1.0
+      '@cesium/widgets': 7.1.0
 
   cesium@1.129.0:
     dependencies:
@@ -6020,9 +6109,11 @@ snapshots:
 
   convert-source-map@2.0.0: {}
 
+  core-js@2.6.12: {}
+
   core-util-is@1.0.3: {}
 
-  cosmiconfig-typescript-loader@4.4.0(@types/node@20.5.1)(cosmiconfig@8.3.6(typescript@4.6.3))(ts-node@10.9.2(@types/node@16.18.122)(typescript@4.6.3))(typescript@5.7.2):
+  cosmiconfig-typescript-loader@4.4.0(@types/node@20.5.1)(cosmiconfig@8.3.6(typescript@4.6.3))(ts-node@10.9.2(@types/node@20.5.1)(typescript@5.7.2))(typescript@5.7.2):
     dependencies:
       '@types/node': 20.5.1
       cosmiconfig: 8.3.6(typescript@5.7.2)
@@ -7315,6 +7406,8 @@ snapshots:
 
   klona@2.0.6: {}
 
+  ktx-parse@0.7.1: {}
+
   ktx-parse@1.0.0: {}
 
   lerc@2.0.0: {}
@@ -7423,6 +7516,10 @@ snapshots:
 
   map-obj@4.3.0: {}
 
+  mapv@2.0.62:
+    dependencies:
+      babel-plugin-external-helpers: 6.22.0
+
   math-intrinsics@1.0.0: {}
 
   memoize-one@6.0.0: {}
@@ -7446,6 +7543,8 @@ snapshots:
   merge2@1.4.1: {}
 
   mersenne-twister@1.1.0: {}
+
+  meshoptimizer@0.21.0: {}
 
   meshoptimizer@0.23.0: {}
 
@@ -7940,6 +8039,8 @@ snapshots:
 
   quickselect@2.0.0: {}
 
+  quickselect@3.0.0: {}
+
   randombytes@2.1.0:
     dependencies:
       safe-buffer: 5.2.1
@@ -7949,6 +8050,10 @@ snapshots:
   rbush@3.0.1:
     dependencies:
       quickselect: 2.0.0
+
+  rbush@4.0.1:
+    dependencies:
+      quickselect: 3.0.0
 
   read-pkg-up@7.0.1:
     dependencies:
@@ -7999,6 +8104,8 @@ snapshots:
       get-intrinsic: 1.2.6
       gopd: 1.2.0
       which-builtin-type: 1.2.1
+
+  regenerator-runtime@0.11.1: {}
 
   regenerator-runtime@0.14.1: {}
 
@@ -8591,9 +8698,9 @@ snapshots:
       evtd: 0.2.4
       vue: 3.5.13(typescript@4.6.3)
 
-  vite-plugin-cesium@1.2.23(cesium@1.129.0)(rollup@3.29.5)(vite@4.3.6(@types/node@16.18.122)(sass@1.49.11)(terser@5.37.0)):
+  vite-plugin-cesium@1.2.23(cesium@1.120.0)(rollup@3.29.5)(vite@4.3.6(@types/node@16.18.122)(sass@1.49.11)(terser@5.37.0)):
     dependencies:
-      cesium: 1.129.0
+      cesium: 1.120.0
       fs-extra: 9.1.0
       rollup-plugin-external-globals: 0.6.1(rollup@3.29.5)
       serve-static: 1.16.2

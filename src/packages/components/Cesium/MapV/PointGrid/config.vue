@@ -1,0 +1,38 @@
+<template>
+  <collapse-item name="基础配置" :expanded="true" key="baseSetting">
+    <cesium-basic-option-edit :basic-option="optionState" @update="onUpdate" />
+  </collapse-item>
+</template>
+
+<script setup lang="ts">
+import { PropType, reactive, nextTick, ref, computed, watch } from 'vue'
+import { option } from './config'
+import { CollapseItem } from '@/components/Pages/ChartItemSetting'
+import cloneDeep from 'lodash/cloneDeep'
+import { CesiumBaseLayerItem, CesiumBaseLayerType, cesiumBasicOption } from '../../index.d'
+import CesiumBasicOptionEdit from '../../components/CesiumBasicOptionEdit.vue'
+
+const props = defineProps({
+  optionData: {
+    type: Object as PropType<typeof option>,
+    required: true
+  }
+})
+
+const cloneViewOpts = cloneDeep(props.optionData.viewOptions)
+const optionState = reactive(cloneViewOpts)
+
+const onUpdate = (val: typeof cesiumBasicOption) => {
+  Object.assign(optionState, val)
+}
+
+watch(
+  () => optionState,
+  val => {
+    props.optionData.viewOptions = Object.assign(props.optionData.viewOptions, optionState)
+  },
+  {
+    deep: true
+  }
+)
+</script>

@@ -1,13 +1,15 @@
 export enum CesiumCategoryEnum {
   CESIUM_BASE = 'Base',
   CESIUM_CONTROL = 'Control',
-  CESIUM_ANALYSIS = 'Analysis'
+  CESIUM_ANALYSIS = 'Analysis',
+  CESIUM_MAPV = 'MapV'
 }
 
 export enum CesiumCategoryEnumName {
   CESIUM_BASE = '基础',
   CESIUM_CONTROL = '控件',
-  CESIUM_ANALYSIS = '分析'
+  CESIUM_ANALYSIS = '分析',
+  CESIUM_MAPV = 'MapV'
 }
 
 export enum CesiumBaseLayerType {

@@ -67,6 +67,7 @@ const detectId = (item: any) => {
   const key = item.chartConfig.chartKey
   const category = item.chartConfig.category
   if (key.includes('VCesium') && category === 'Base') return 'cesiumContainer'
+  else if (key.includes('VMapV')) return 'cesiumContainer'
   else if (key.includes('VOL') && category === 'Base') return 'olMapContainer'
   else return item.id
 }
