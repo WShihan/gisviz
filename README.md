@@ -72,4 +72,5 @@ pnpm run build
 
 - 支持三维GIS场景。
 - 修改项目名称，商标及其他元数据。
+- 三维可视化基于MapV和Cesium。
 
