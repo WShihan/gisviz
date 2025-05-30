@@ -8,7 +8,7 @@
           <template v-for="item in bgList" :key="item">
             <div class="bg-img-box-li list-complete-item">
               <n-collapse-transition :appear="true" :show="showBg">
-                <img :src="getImageUrl(item, 'chart/charts')" alt="chart" />
+                <img :src="getImageUrl(item, 'chart/cesium')" alt="chart" />
               </n-collapse-transition>
             </div>
           </template>
@@ -144,7 +144,17 @@ const shuffleTimiing = ref()
 const carouselImgList = ['one', 'two', 'three']
 
 // 背景图
-const bgList = ref(['bar_y', 'bar_x', 'line_gradient', 'line', 'funnel', 'heatmap', 'graph', 'pie', 'radar'])
+const bgList = ref([
+  'flow-heatmap',
+  'cesium-heatmap',
+  'point-grid',
+  'point-lighter',
+  'cesium-marker',
+  'edge-flow',
+  'slope',
+  'height-restriction',
+  'viewshed'
+])
 
 // 处理url获取
 const getImageUrl = (name: string, folder: string) => {
