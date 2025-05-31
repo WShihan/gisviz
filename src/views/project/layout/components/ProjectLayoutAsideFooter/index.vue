@@ -1,5 +1,32 @@
 <template>
-  <div></div>
+  <div class="go-aside-footer">
+    <n-divider class="go-mt-0"></n-divider>
+    <n-space justify="space-around" :vertical="collapsed">
+      <n-tooltip v-if="collapsed" placement="right" trigger="hover">
+        <template #trigger>
+          <n-button class="go-ml-2" secondary @click="handleDoc">
+            <template #icon>
+              <n-icon size="18">
+                <code-slash-icon></code-slash-icon>
+              </n-icon>
+            </template>
+          </n-button>
+        </template>
+        <n-text>
+          {{ $t('global.code_addr') }}
+        </n-text>
+      </n-tooltip>
+
+      <n-button v-else secondary @click="handleCode">
+        <template #icon>
+          <n-icon size="18">
+            <code-slash-icon></code-slash-icon>
+          </n-icon>
+        </template>
+        <n-text v-show="!collapsed">{{ $t('global.code_addr') }}</n-text>
+      </n-button>
+    </n-space>
+  </div>
 </template>
 <script setup lang="ts">
 import { openDoc, openGiteeSourceCode, openNewWindow } from '@/utils'
@@ -17,10 +44,6 @@ const handleDoc = () => {
 
 const handleCode = () => {
   openGiteeSourceCode()
-}
-
-const clickHandle = () => {
-  openNewWindow('https://ai.goviewlink.com/saas/')
 }
 </script>
 

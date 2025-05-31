@@ -1,5 +1,5 @@
 import path from 'path'
-export const OUTPUT_DIR = 'dist'
+export const OUTPUT_DIR = 'dist/gisviz'
 
 // monaco-editor 路径
 export const prefix = `monaco-editor/esm/vs`
@@ -15,8 +15,8 @@ export const rollupOptions = {
   output: {
     chunkFileNames: 'static/js/[name]-[hash].js',
     entryFileNames: 'static/js/[name]-[hash].js',
-    assetFileNames: (chunkInfo) => {
-      if(['.png', '.jpg', '.jpeg'].includes(path.extname(chunkInfo.name))) {
+    assetFileNames: chunkInfo => {
+      if (['.png', '.jpg', '.jpeg'].includes(path.extname(chunkInfo.name))) {
         return `static/[ext]/[name].[ext]`
       }
       return `static/[ext]/[name]-[hash].[ext]`
