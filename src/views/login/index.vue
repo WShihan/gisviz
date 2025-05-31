@@ -120,8 +120,8 @@ const systemStore = useSystemStore()
 const t = window['$t']
 
 const formInline = reactive({
-  username: 'admin',
-  password: 'admin'
+  username: 'demo',
+  password: 'demo1234'
 })
 
 const rules = {

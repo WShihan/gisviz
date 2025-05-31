@@ -3,7 +3,7 @@
 
 ## 示例
 
-[demo](https://giserlab.cn/demo/gisviz/index.html)
+👀 [示例](https://giserlab.cn/service/gisviz/index.html)
 
 ![工作台](./readme/design.png)
 
