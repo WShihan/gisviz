@@ -8,13 +8,15 @@ import { viteMockServe } from 'vite-plugin-mock'
 import monacoEditorPlugin from 'vite-plugin-monaco-editor'
 import cesium from 'vite-plugin-cesium'
 
+const baseURL = 'https://private-1301600412.cos.ap-nanjing.myqcloud.com/cdn/gisviz'
+
 function pathResolve(dir: string) {
   return resolve(process.cwd(), '.', dir)
 }
 
 export default ({ mode }) =>
   defineConfig({
-    base: process.env.NODE_ENV === 'production' ? './' : '/',
+    base: process.env.NODE_ENV === 'production' ? baseURL : '/',
     // 路径重定向
     resolve: {
       alias: [
